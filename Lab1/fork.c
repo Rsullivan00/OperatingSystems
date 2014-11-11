@@ -6,6 +6,7 @@
  *  Solution to the first part of Lab 1.
  *  Prints 7 process IDs
  */
+
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
