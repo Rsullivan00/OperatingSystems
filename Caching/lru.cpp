@@ -1,39 +1,57 @@
 #include <iostream>
 #include <string>
-#include <vector>
+#include <deque>
 #include <cstdlib>
 
+#include "Page.h"
+
 /* Simulates the least recently used page replacement algorithm. 
- * Uses a vector to maintain the queue of pages, with the most
- * recently used page at the back of the vector.
+ * Uses a deque to maintain the queue of pages, with the most
+ * recently used page at the front of the deque.
  * */
 void leastRecentlyUsed(int numPFrames) {
-    std::vector<Page> pages(numPFrames);
+    std::deque<Page> pages(numPFrames);
 
-    int pageID, i = 0;
+    int pageID;
     while(std::cin >> pageID) {
-	if (tableContainsPage(pages, pageID))
-	    continue;
+        bool found = false;
+        for (int i = 0; i < pages.size(); i++) {
+            if (pages[i].id == pageID) {
+                /* If we found the page, move it to the front of the queue. */
+                pages.erase(pages.begin() + i);
+                Page newPage(pageID);
+                pages.push_front(newPage);
+                found = true;
+                break;
+            }
+        }
 
-	/* Else we have a page fault, so we want to replace a page. */
-	std::cout << pageID << std::endl;
+        if (found)
+            continue;
 
-	while(pages[i].referenced == true) {
-	    /* Set referenced value to false. */
-	    pages[i].referenced = false;
-	    i = (i+1) % numPFrames;
-	}
+        /* Else we have a page fault. */
+        std::cout << pageID << std::endl;
 
-	/* Iterator is pointing to a non-referenced page. */
-	Page newPage(pageID);
-	pages[i] = newPage;
-	//std::cout << "Adding page " << newPage.id << std::endl;
-	//printPages(pages);
+        /* If the page table is full, get rid of the last page. */
+        if (pages.size() == numPFrames)
+            pages.pop_back();
+
+        /* Add to front of queue. */
+        Page newPage(pageID);
+        pages.push_front(newPage);
+
+        //std::cout << "Adding page " << newPage.id << std::endl;
+        //printPages(pages);
     }
 }
 
 int main(int argc, char **argv) {
     /* Should be given a single command-line argument for the number of available page frames. */
+    if (argc != 2) {
+        std::cout << "Provide a single command-line argument for the number of page frames available." << std::endl;
+        return 0;
+    }
+
     int numPFrames = atoi(argv[1]);
 
     leastRecentlyUsed(numPFrames);

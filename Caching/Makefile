@@ -1,22 +1,34 @@
 CC=gcc
 CXX=g++
 RM=rm -f
-CPPFLAGS=-g $(shell root-config --cflags)
-LDFLAGS=-g $(shell root-config --ldflags)
-LDLIBS=$(shell root-config --libs)
+CPPFLAGS=-g -std=c++11
 
-SRCS=Page.cpp secondChance.cpp
+SRCS=Page.cpp secondChance.cpp lru.cpp lfu.cpp random.cpp
 OBJS=$(subst .cpp,.o,$(SRCS))
 
-all: secondChance Page
+all: secondChance lru lfu random
 
-secondChance: $(OBJS)
-	$(CXX) $(LDFLAGS) -o secondChance $(OBJS) $(LDLIBS) 
+secondChance: Page.o secondChance.o 
+	$(CXX) $(CPPFLAGS) Page.cpp secondChance.cpp -o secondChance
 
-secondChance.o: secondChance.cpp Page.cpp
+lru: Page.o lru.o 
+	$(CXX) $(CPPFLAGS) Page.cpp lru.cpp -o lru 
+
+lfu: Page.o lfu.o 
+	$(CXX) $(CPPFLAGS) Page.cpp lfu.cpp -o lfu 
+
+random: Page.o lfu.o 
+	$(CXX) $(CPPFLAGS) Page.cpp random.cpp -o random 
+
+secondChance.o: Page.h secondChance.cpp
+
+lru.o: Page.h lru.cpp
+
+lfu.o: Page.h lfu.cpp
+
+random.o: Page.h random.cpp
+
+Page.o: Page.h
 
 clean:
-	$(RM) $(OBJS)
-
-dist-clean: clean
-	$(RM) secondChance 
+	$(RM) $(OBJS) *.exe

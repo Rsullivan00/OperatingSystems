@@ -1,0 +1,69 @@
+Table size: 10
+X=# of elements in input files. Y=Range of page IDs in input files.
+
+	500       		1000      		2000      	
+50
+	lru: 371  	|	lru: 473  	|	lru: 495  	|
+	lfu: 362  	|	lfu: 472  	|	lfu: 496  	|
+	sec: 381  	|	sec: 473  	|	sec: 495  	|
+	ran: 382  	|	ran: 467  	|	ran: 494  	|
+
+200
+	lru: 734  	|	lru: 941  	|	lru: 988  	|
+	lfu: 699  	|	lfu: 927  	|	lfu: 987  	|
+	sec: 743  	|	sec: 944  	|	sec: 988  	|
+	ran: 746  	|	ran: 930  	|	ran: 985  	|
+
+1000
+	lru: 1467 	|	lru: 1879 	|	lru: 1974 	|
+	lfu: 1462 	|	lfu: 1859 	|	lfu: 1972 	|
+	sec: 1464 	|	sec: 1877 	|	sec: 1974 	|
+	ran: 1492 	|	ran: 1880 	|	ran: 1968 	|
+
+
+Table size: 100
+X=# of elements in input files. Y=Range of page IDs in input files.
+
+	500       		1000      		2000      	
+50
+	lru: 48   	|	lru: 218  	|	lru: 438  	|
+	lfu: 48   	|	lfu: 209  	|	lfu: 446  	|
+	sec: 48   	|	sec: 224  	|	sec: 442  	|
+	ran: 62   	|	ran: 287  	|	ran: 453  	|
+
+200
+	lru: 48   	|	lru: 426  	|	lru: 877  	|
+	lfu: 48   	|	lfu: 408  	|	lfu: 872  	|
+	sec: 48   	|	sec: 436  	|	sec: 883  	|
+	ran: 62   	|	ran: 497  	|	ran: 891  	|
+
+1000
+	lru: 50   	|	lru: 728  	|	lru: 1754 	|
+	lfu: 50   	|	lfu: 717  	|	lfu: 1741 	|
+	sec: 50   	|	sec: 793  	|	sec: 1754 	|
+	ran: 67   	|	ran: 844  	|	ran: 1755 	|
+
+
+Table size: 500
+X=# of elements in input files. Y=Range of page IDs in input files.
+
+	500       		1000      		2000      	
+50
+	lru: 47   	|	lru: 165  	|	lru: 371  	|
+	lfu: 47   	|	lfu: 165  	|	lfu: 371  	|
+	sec: 47   	|	sec: 165  	|	sec: 371  	|
+	ran: 47   	|	ran: 187  	|	ran: 403  	|
+
+200
+	lru: 49   	|	lru: 188  	|	lru: 583  	|
+	lfu: 49   	|	lfu: 188  	|	lfu: 577  	|
+	sec: 49   	|	sec: 188  	|	sec: 584  	|
+	ran: 50   	|	ran: 223  	|	ran: 688  	|
+
+1000
+	lru: 50   	|	lru: 191  	|	lru: 940  	|
+	lfu: 50   	|	lfu: 191  	|	lfu: 942  	|
+	sec: 50   	|	sec: 191  	|	sec: 982  	|
+	ran: 51   	|	ran: 238  	|	ran: 1167 	|
+
+
