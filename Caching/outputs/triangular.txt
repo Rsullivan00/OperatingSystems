@@ -3,22 +3,22 @@ X=# of elements in input files. Y=Range of page IDs in input files.
 
 	500       		1000      		2000      	
 50
-	lru: 371  	|	lru: 473  	|	lru: 495  	|
-	lfu: 362  	|	lfu: 472  	|	lfu: 496  	|
-	sec: 381  	|	sec: 473  	|	sec: 495  	|
-	ran: 382  	|	ran: 467  	|	ran: 494  	|
+	lru: 376  	|	lru: 464  	|	lru: 497  	|
+	lfu: 365  	|	lfu: 464  	|	lfu: 491  	|
+	sec: 380  	|	sec: 464  	|	sec: 497  	|
+	ran: 383  	|	ran: 461  	|	ran: 491  	|
 
 200
-	lru: 734  	|	lru: 941  	|	lru: 988  	|
-	lfu: 699  	|	lfu: 927  	|	lfu: 987  	|
-	sec: 743  	|	sec: 944  	|	sec: 988  	|
-	ran: 746  	|	ran: 930  	|	ran: 985  	|
+	lru: 747  	|	lru: 954  	|	lru: 987  	|
+	lfu: 730  	|	lfu: 947  	|	lfu: 992  	|
+	sec: 751  	|	sec: 956  	|	sec: 987  	|
+	ran: 734  	|	ran: 952  	|	ran: 983  	|
 
 1000
-	lru: 1467 	|	lru: 1879 	|	lru: 1974 	|
-	lfu: 1462 	|	lfu: 1859 	|	lfu: 1972 	|
-	sec: 1464 	|	sec: 1877 	|	sec: 1974 	|
-	ran: 1492 	|	ran: 1880 	|	ran: 1968 	|
+	lru: 1479 	|	lru: 1851 	|	lru: 1958 	|
+	lfu: 1598 	|	lfu: 1827 	|	lfu: 1972 	|
+	sec: 1494 	|	sec: 1849 	|	sec: 1958 	|
+	ran: 1495 	|	ran: 1867 	|	ran: 1957 	|
 
 
 Table size: 100
@@ -26,22 +26,22 @@ X=# of elements in input files. Y=Range of page IDs in input files.
 
 	500       		1000      		2000      	
 50
-	lru: 48   	|	lru: 218  	|	lru: 438  	|
-	lfu: 48   	|	lfu: 209  	|	lfu: 446  	|
-	sec: 48   	|	sec: 224  	|	sec: 442  	|
-	ran: 62   	|	ran: 287  	|	ran: 453  	|
+	lru: 45   	|	lru: 237  	|	lru: 438  	|
+	lfu: 45   	|	lfu: 219  	|	lfu: 427  	|
+	sec: 45   	|	sec: 225  	|	sec: 438  	|
+	ran: 56   	|	ran: 278  	|	ran: 453  	|
 
 200
-	lru: 48   	|	lru: 426  	|	lru: 877  	|
-	lfu: 48   	|	lfu: 408  	|	lfu: 872  	|
-	sec: 48   	|	sec: 436  	|	sec: 883  	|
-	ran: 62   	|	ran: 497  	|	ran: 891  	|
+	lru: 47   	|	lru: 383  	|	lru: 864  	|
+	lfu: 47   	|	lfu: 410  	|	lfu: 880  	|
+	sec: 47   	|	sec: 395  	|	sec: 870  	|
+	ran: 62   	|	ran: 454  	|	ran: 885  	|
 
 1000
-	lru: 50   	|	lru: 728  	|	lru: 1754 	|
-	lfu: 50   	|	lfu: 717  	|	lfu: 1741 	|
-	sec: 50   	|	sec: 793  	|	sec: 1754 	|
-	ran: 67   	|	ran: 844  	|	ran: 1755 	|
+	lru: 49   	|	lru: 775  	|	lru: 1745 	|
+	lfu: 49   	|	lfu: 723  	|	lfu: 1758 	|
+	sec: 49   	|	sec: 829  	|	sec: 1746 	|
+	ran: 64   	|	ran: 858  	|	ran: 1741 	|
 
 
 Table size: 500
@@ -49,21 +49,21 @@ X=# of elements in input files. Y=Range of page IDs in input files.
 
 	500       		1000      		2000      	
 50
-	lru: 47   	|	lru: 165  	|	lru: 371  	|
-	lfu: 47   	|	lfu: 165  	|	lfu: 371  	|
-	sec: 47   	|	sec: 165  	|	sec: 371  	|
-	ran: 47   	|	ran: 187  	|	ran: 403  	|
+	lru: 47   	|	lru: 163  	|	lru: 374  	|
+	lfu: 47   	|	lfu: 163  	|	lfu: 374  	|
+	sec: 47   	|	sec: 163  	|	sec: 374  	|
+	ran: 49   	|	ran: 182  	|	ran: 396  	|
 
 200
-	lru: 49   	|	lru: 188  	|	lru: 583  	|
-	lfu: 49   	|	lfu: 188  	|	lfu: 577  	|
-	sec: 49   	|	sec: 188  	|	sec: 584  	|
-	ran: 50   	|	ran: 223  	|	ran: 688  	|
+	lru: 46   	|	lru: 185  	|	lru: 559  	|
+	lfu: 46   	|	lfu: 185  	|	lfu: 559  	|
+	sec: 46   	|	sec: 185  	|	sec: 561  	|
+	ran: 48   	|	ran: 227  	|	ran: 654  	|
 
 1000
-	lru: 50   	|	lru: 191  	|	lru: 940  	|
-	lfu: 50   	|	lfu: 191  	|	lfu: 942  	|
-	sec: 50   	|	sec: 191  	|	sec: 982  	|
-	ran: 51   	|	ran: 238  	|	ran: 1167 	|
+	lru: 49   	|	lru: 190  	|	lru: 939  	|
+	lfu: 49   	|	lfu: 190  	|	lfu: 954  	|
+	sec: 49   	|	sec: 190  	|	sec: 988  	|
+	ran: 51   	|	ran: 244  	|	ran: 1156 	|
 
 
