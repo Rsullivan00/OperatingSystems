@@ -4,6 +4,7 @@ RM=rm -f
 CPPFLAGS=-g
 
 SRCS=Page.cpp secondChance.cpp lru.cpp lfu.cpp random.cpp
+PROGS=$(subst .cpp,,$(SRCS))
 OBJS=$(subst .cpp,.o,$(SRCS))
 
 all: secondChance lru lfu random
@@ -31,4 +32,4 @@ random.o: Page.h random.cpp
 Page.o: Page.h
 
 clean:
-	$(RM) $(OBJS) *.exe
+	$(RM) $(OBJS) $(PROGS)
