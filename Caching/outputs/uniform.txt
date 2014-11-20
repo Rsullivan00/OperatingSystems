@@ -1,69 +1,69 @@
 Table size: 10
 X=# of elements in input files. Y=Range of page IDs in input files.
 
-	500       		1000      		2000      	
+	500            		1000           		2000           	
 50
-	lru: 404  	|	lru: 466  	|	lru: 493  	|
-	lfu: 407  	|	lfu: 463  	|	lfu: 496  	|
-	sec: 407  	|	sec: 467  	|	sec: 493  	|
-	ran: 399  	|	ran: 477  	|	ran: 493  	|
+	lru: 398 79%   	|	lru: 796 79%   	|	lru: 1616 80%  	|
+	lfu: 402 80%   	|	lfu: 771 77%   	|	lfu: 1597 79%  	|
+	sec: 402 80%   	|	sec: 796 79%   	|	sec: 1617 80%  	|
+	ran: 400 80%   	|	ran: 796 79%   	|	ran: 1625 81%  	|
 
 200
-	lru: 806  	|	lru: 945  	|	lru: 988  	|
-	lfu: 811  	|	lfu: 951  	|	lfu: 996  	|
-	sec: 805  	|	sec: 946  	|	sec: 988  	|
-	ran: 808  	|	ran: 956  	|	ran: 989  	|
+	lru: 481 96%   	|	lru: 956 95%   	|	lru: 1881 94%  	|
+	lfu: 472 94%   	|	lfu: 943 94%   	|	lfu: 1911 95%  	|
+	sec: 480 96%   	|	sec: 956 95%   	|	sec: 1882 94%  	|
+	ran: 477 95%   	|	ran: 953 95%   	|	ran: 1885 94%  	|
 
 1000
-	lru: 1629 	|	lru: 1898 	|	lru: 1987 	|
-	lfu: 1602 	|	lfu: 1910 	|	lfu: 1991 	|
-	sec: 1618 	|	sec: 1897 	|	sec: 1987 	|
-	ran: 1618 	|	ran: 1908 	|	ran: 1987 	|
+	lru: 494 98%   	|	lru: 989 98%   	|	lru: 1974 98%  	|
+	lfu: 496 99%   	|	lfu: 993 99%   	|	lfu: 1971 98%  	|
+	sec: 494 98%   	|	sec: 989 98%   	|	sec: 1974 98%  	|
+	ran: 494 98%   	|	ran: 988 98%   	|	ran: 1973 98%  	|
 
 
 Table size: 100
 X=# of elements in input files. Y=Range of page IDs in input files.
 
-	500       		1000      		2000      	
+	500            		1000           		2000           	
 50
-	lru: 50   	|	lru: 278  	|	lru: 454  	|
-	lfu: 50   	|	lfu: 280  	|	lfu: 460  	|
-	sec: 50   	|	sec: 280  	|	sec: 456  	|
-	ran: 70   	|	ran: 308  	|	ran: 459  	|
+	lru: 50 10%    	|	lru: 50 5%     	|	lru: 50 2%     	|
+	lfu: 50 10%    	|	lfu: 50 5%     	|	lfu: 50 2%     	|
+	sec: 50 10%    	|	sec: 50 5%     	|	sec: 50 2%     	|
+	ran: 71 14%    	|	ran: 71 7%     	|	ran: 71 3%     	|
 
 200
-	lru: 50   	|	lru: 512  	|	lru: 902  	|
-	lfu: 50   	|	lfu: 526  	|	lfu: 911  	|
-	sec: 50   	|	sec: 511  	|	sec: 907  	|
-	ran: 70   	|	ran: 570  	|	ran: 903  	|
+	lru: 278 55%   	|	lru: 483 48%   	|	lru: 1062 53%  	|
+	lfu: 284 56%   	|	lfu: 528 52%   	|	lfu: 1055 52%  	|
+	sec: 284 56%   	|	sec: 499 49%   	|	sec: 1057 52%  	|
+	ran: 324 64%   	|	ran: 573 57%   	|	ran: 1080 54%  	|
 
 1000
-	lru: 50   	|	lru: 1040 	|	lru: 1799 	|
-	lfu: 50   	|	lfu: 1015 	|	lfu: 1816 	|
-	sec: 50   	|	sec: 1045 	|	sec: 1792 	|
-	ran: 70   	|	ran: 1056 	|	ran: 1799 	|
+	lru: 451 90%   	|	lru: 908 90%   	|	lru: 1777 88%  	|
+	lfu: 459 91%   	|	lfu: 908 90%   	|	lfu: 1808 90%  	|
+	sec: 451 90%   	|	sec: 913 91%   	|	sec: 1781 89%  	|
+	ran: 462 92%   	|	ran: 918 91%   	|	ran: 1792 89%  	|
 
 
 Table size: 500
 X=# of elements in input files. Y=Range of page IDs in input files.
 
-	500       		1000      		2000      	
+	500            		1000           		2000           	
 50
-	lru: 50   	|	lru: 183  	|	lru: 397  	|
-	lfu: 50   	|	lfu: 183  	|	lfu: 397  	|
-	sec: 50   	|	sec: 183  	|	sec: 397  	|
-	ran: 52   	|	ran: 216  	|	ran: 422  	|
+	lru: 50 10%    	|	lru: 50 5%     	|	lru: 50 2%     	|
+	lfu: 50 10%    	|	lfu: 50 5%     	|	lfu: 50 2%     	|
+	sec: 50 10%    	|	sec: 50 5%     	|	sec: 50 2%     	|
+	ran: 50 10%    	|	ran: 50 5%     	|	ran: 50 2%     	|
 
 200
-	lru: 50   	|	lru: 198  	|	lru: 659  	|
-	lfu: 50   	|	lfu: 198  	|	lfu: 654  	|
-	sec: 50   	|	sec: 198  	|	sec: 655  	|
-	ran: 52   	|	ran: 239  	|	ran: 746  	|
+	lru: 179 35%   	|	lru: 198 19%   	|	lru: 200 10%   	|
+	lfu: 179 35%   	|	lfu: 198 19%   	|	lfu: 200 10%   	|
+	sec: 179 35%   	|	sec: 198 19%   	|	sec: 200 10%   	|
+	ran: 192 38%   	|	ran: 230 23%   	|	ran: 238 11%   	|
 
 1000
-	lru: 50   	|	lru: 200  	|	lru: 1167 	|
-	lfu: 50   	|	lfu: 200  	|	lfu: 1132 	|
-	sec: 50   	|	sec: 200  	|	sec: 1166 	|
-	ran: 52   	|	ran: 254  	|	ran: 1320 	|
+	lru: 409 81%   	|	lru: 644 64%   	|	lru: 1153 57%  	|
+	lfu: 409 81%   	|	lfu: 640 64%   	|	lfu: 1135 56%  	|
+	sec: 409 81%   	|	sec: 643 64%   	|	sec: 1123 56%  	|
+	ran: 429 85%   	|	ran: 753 75%   	|	ran: 1319 65%  	|
 
 

@@ -1,7 +1,7 @@
 CC=gcc
 CXX=g++
 RM=rm -f
-CPPFLAGS=-g -std=c++11
+CPPFLAGS=-g
 
 SRCS=Page.cpp secondChance.cpp lru.cpp lfu.cpp random.cpp
 OBJS=$(subst .cpp,.o,$(SRCS))

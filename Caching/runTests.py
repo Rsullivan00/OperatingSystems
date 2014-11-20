@@ -19,23 +19,19 @@ for fileName in os.listdir(inputDir):
         for inputSize in inputSizes:
             row = []
             for idRange in idRanges:
-                #fout.write('# of inputs: ' + inputSize + '\t')
-                #fout.write('Range of inputs: 0-' + idRange + '\t')
                 writeInputFiles(int(inputSize), int(idRange))
                 element = {}
                 
                 for prog in progs:
-                    cmd = 'cat ' + inputDir + fileName + '| ./' + prog + ' ' + tableSize + ' | wc'
+                    cmd = 'cat ' + inputDir + fileName + '| ./' + prog + ' ' + tableSize + ' | wc -l'
                     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
                     output, errors = p.communicate()
-                    linesOut = output.split()[1]
-                    #fout.write(prog + '\t' + linesOut + '\n')
-                    element[prog] = int(linesOut)
+                    element[prog] = int(output)
 
                 row.append(element)
             counts.append(row)
 
-        colWidth = 10 
+        colWidth = 15 
         for inputSize in inputSizes:
             fout.write('\t' + inputSize.ljust(colWidth) + '\t')
         fout.write('\n')
@@ -44,7 +40,9 @@ for fileName in os.listdir(inputDir):
             fout.write(idRanges[i] + '\n')
             for prog in progs:
                 for j in range(len(inputSizes)):
-                    content = prog[0:3] + ': ' + str(counts[i][j][prog])
+                    numMissed = counts[j][i][prog]
+                    percentMissed = (int(numMissed) * 100) / int(inputSizes[j])
+                    content = prog[0:3] + ': ' + str(numMissed) + ' ' + str(percentMissed) + '%'
                     fout.write('\t' + content.ljust(colWidth) + '\t|')
                 fout.write('\n')
             fout.write('\n')
