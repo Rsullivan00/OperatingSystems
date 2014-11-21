@@ -1,21 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Programming/Coding Assignment
+% Short Sectioned Assignment
 % LaTeX Template
+% Version 1.0 (5/5/12)
 %
 % This template has been downloaded from:
-% http://www.latextemplates.com
+% http://www.LaTeXTemplates.com
 %
 % Original author:
-% Ted Pavlic (http://www.tedpavlic.com)
+% Frits Wenneker (http://www.howtotex.com)
 %
-% Note:
-% The \lipsum[#] commands throughout this template generate dummy text
-% to fill the template out. These commands should all be removed when 
-% writing assignment content.
-%
-% This template uses a Perl script as an example snippet of code, most other
-% languages are also usable. Configure them in the "CODE INCLUSION 
-% CONFIGURATION" section.
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -23,155 +18,178 @@
 %   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass{article}
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
 
-\usepackage{fancyhdr} % Required for custom headers
-\usepackage{lastpage} % Required to determine the last page for the footer
-\usepackage{extramarks} % Required for headers and footers
-\usepackage[usenames,dvipsnames]{color} % Required for custom colors
-\usepackage{graphicx} % Required to insert images
-\usepackage{listings} % Required for insertion of code
-\usepackage{courier} % Required for the courier font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
 
-% Margins
-\topmargin=-0.45in
-\evensidemargin=0in
-\oddsidemargin=0in
-\textwidth=6.5in
-\textheight=9.0in
-\headsep=0.25in
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
-\linespread{1.1} % Line spacing
+\usepackage{sectsty} % Allows customizing section commands
 
-% Set up the header and footer
-\pagestyle{fancy}
-\lhead{\hmwkAuthorName} % Top left header
-\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle} % Top center head
-\rhead{\firstxmark} % Top right header
-\lfoot{\lastxmark} % Bottom left footer
-\cfoot{} % Bottom center footer
-\rfoot{Page\ \thepage\ of\ \protect\pageref{LastPage}} % Bottom right footer
-\renewcommand\headrulewidth{0.4pt} % Size of the header rule
-\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+\usepackage{listings}
+\lstset{breaklines=true}
 
-\setlength\parindent{0pt} % Removes all indentation from paragraphs
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
 
 %----------------------------------------------------------------------------------------
-%   CODE INCLUSION CONFIGURATION
+%   TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\definecolor{MyDarkGreen}{rgb}{0.0,0.4,0.0} % This is the color used for comments
-\lstloadlanguages{Perl} % Load Perl syntax for listings, for a list of other languages supported see: ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf
-\lstset{language=Perl, % Use Perl in this example
-        frame=single, % Single frame around code
-        basicstyle=\small\ttfamily, % Use small true type font
-        keywordstyle=[1]\color{Blue}\bf, % Perl functions bold and blue
-        keywordstyle=[2]\color{Purple}, % Perl function arguments purple
-        keywordstyle=[3]\color{Blue}\underbar, % Custom functions underlined and blue
-        identifierstyle=, % Nothing special about identifiers                                         
-        commentstyle=\usefont{T1}{pcr}{m}{sl}\color{MyDarkGreen}\small, % Comments small dark green courier font
-        stringstyle=\color{Purple}, % Strings are purple
-        showstringspaces=false, % Don't put marks in string spaces
-        tabsize=5, % 5 spaces per tab
-        %
-        % Put standard Perl functions not included in the default language here
-        morekeywords={rand},
-        %
-        % Put Perl function parameters here
-        morekeywords=[2]{on, off, interp},
-        %
-        % Put user defined functions here
-        morekeywords=[3]{test},
-        %
-        morecomment=[l][\color{Blue}]{...}, % Line continuation (...) like blue comment
-        numbers=left, % Line numbers on left
-        firstnumber=1, % Line numbers start with line 1
-        numberstyle=\tiny\color{Blue}, % Line numbers are blue and small
-        stepnumber=5 % Line numbers go in steps of 5
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{ 
+\normalfont \normalsize 
+\textsc{Santa Clara University} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Caching Lab\\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
-%----------------------------------------------------------------------------------------
-%   DOCUMENT STRUCTURE COMMANDS
-%   Skip this unless you know what you're doing
-%----------------------------------------------------------------------------------------
+\author{Rick Sullivan} % Your name
 
-% Header and footer for when a page split occurs within a problem environment
-\newcommand{\enterProblemHeader}[1]{
-\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
-\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
-}
-
-% Header and footer for when a page split occurs between problem environments
-\newcommand{\exitProblemHeader}[1]{
-\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
-\nobreak\extramarks{#1}{}\nobreak
-}
-
-\setcounter{secnumdepth}{0} % Removes default section numbers
-\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
-
-\newcommand{\homeworkProblemName}{}
-\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
-\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
-\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
-\section{\homeworkProblemName} % Make a section in the document with the custom problem count
-\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
-}{
-\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
-}
-
-\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
-\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
-}
-
-\newcommand{\homeworkSectionName}{}
-\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
-\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
-\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
-\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
-}{
-\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
-}
-
-%----------------------------------------------------------------------------------------
-%   NAME AND CLASS SECTION
-%----------------------------------------------------------------------------------------
-
-\newcommand{\hmwkTitle}{Caching\ Lab} % Assignment title
-\newcommand{\hmwkDueDate}{21\ November\ 2014} % Due date
-\newcommand{\hmwkClass}{Operating\ Systems} % Course/class
-\newcommand{\hmwkClassInstructor}{Jones} % Teacher/lecturer
-\newcommand{\hmwkAuthorName}{Rick\ Sullivan} % Your name
-
-%----------------------------------------------------------------------------------------
-%   TITLE PAGE
-%----------------------------------------------------------------------------------------
-
-\title{
-\vspace{2in}
-\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
-\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
-\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
-\vspace{3in}
-}
-
-\author{\textbf{\hmwkAuthorName}}
-\date{} % Insert date here if you want it to appear below your name
-
-%----------------------------------------------------------------------------------------
+\date{\normalsize\today} % Today's date or a custom date
 
 \begin{document}
 
-\maketitle
+\maketitle % Print the title
 
 %----------------------------------------------------------------------------------------
-%   TABLE OF CONTENTS
+%   Body
 %----------------------------------------------------------------------------------------
 
-%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
+\section{Least Recently Used}
+The least recently used algorithm maintains an ordered list of pages currently in memory. My source code can be found in the Appendix section 5.1.3. My algorithm iterates through the list of pages, looking for a match of the requested page ID. 
 
-\newpage
-\tableofcontents
-\newpage
+If the page is found, it is removed from that position in the list, and reinserted at the head of the list. If it is not found, however, we remove the last page in the list, because that must be the least recently used of all pages in memory. The new page is then likewise inserted at the head of the list.
+
+The disadvantage of LRU lies in the fact that you must iterate through the list of pages; traversal through a linked-list or deuque is O(n) and will be slow on large lists. As shown on the example in class (Figure 1.1), LRU can avoid a large number of cache misses because it accommodates the behavior of real-world programs. 
+
+\begin{figure}
+    \centering
+0 2 1 3 5 4 6 3 7 4 7 3 3 5 5 3 1 1 1 7 1 3 4 1 
+\caption{Input given in the class slides to differentiate page replacement algorithms.}
+\end{figure}
+
+\paragraph{Testing LRU}
+Using the input from in class, LRU results in only 11 cache misses when using a page table size of four. In my automated testing, I only found that LRU generated slightly lower hit rates than my other tested algorithms. This is likely due to the fact that my test inputs were still very random, so semi-intelligent page selection does not help all that much.
+
+The most interesting test case is my third test, where one page is requested 25\% of the time. LRU consistently has a miss rate trailing only LFU. LFU performs exceptionally well on this test only because it is almost guaranteed to never kick a popular page out of memory.
+
+\section{Least Frequently Used}
+The least frequently used algorithm maintains counts of how many times each page has been accessed. It does not maintain any ordering of the pages themselves. At the time of an interrupt, LFU updates the count of how many times each page has been accessed. It then removes the page with the lowest access count when a page needs to be replaced. My LFU implementation can be found in section 5.1.4. 
+
+For my implementation, I created a \texttt{pageTableScan} function that increments the counter attributes of each page that has been referenced in the time since the function was last called. Because simulating an interrupt is relatively complicated, I simply update the page counters whenever we have a page fault.
+
+When a page fault occurs, after updating page reference counters, I then traverse the list, looking for the Page object with the smallest count value. This least-frequently referenced page is then replaced with the new page.
+
+This implementation requires list traversal for both reference updating and for finding the least frequently used page. This could likely be improved by maintaining pages in a binary tree or min heap. However, LFU by itself is undesirable because it has no method of removing pages that have a high reference count. If a page is referenced many times in a short period of time, it may never actually be removed from memory, even if it is never referenced again.
+
+\paragraph{Testing LFU}
+As expected, LFU is unexceptional in all tests except for my third test, where one page is accessed 25\% of the time. Because LFU is unlikely to ever remove a frequently-used page from memory, that page will remain in memory throughout the test. This is unrealistic, as real-world programs will access pages in a certain range repeatedly, but then move on to other locations.
+
+Using the class slide input (Figure 1.1), we see that LFU registers 13 page faults; LFU is slightly less successful than LRU, although this example is created to show the strength of LRU.
+
+\section{Second Chance}
+The second chance algorithm is very similar to a plain FIFO queue implementation. However, as the name implies, this algorithm will consider a page at least twice before it is replaced. This is accomplished by maintaining a circular list. Each page then maintains a flag to indicate whether or not it has been referenced. On traversing the list, the page replacement algorithm will replace any page that has not been referenced. Any referenced page it considers has its referenced flag set to false, as well.
+
+For my implementation, I used a vector data structure as a circular list. I maintain an index integer; as soon as the index overflows the boundary of the array, it is reset to zero, and the program continues. New pages are inserted wherever the first non-referenced page is found. My implementation has a linear search time for pages in the page table. Page replacement itself is also linear in time.
+
+\paragraph{Testing Second Chance}
+Like LRU, the second chance algorithm does not distinguish itself in my generated semi-random tests. Using the slides' example (Figure 1.1), second chance misses 12 page requests. This is in-between the results for LRU and LFU.
+
+\section{Random}
+Randomly selecting pages for replacement has clear benefits and disadvantages. It does not require any overhead involved in tracking if or how many times a page has been referenced. However, it is also not able to make intelligent assumptions about the behavior of real-world programs. Many complex page replacement algorithms fall back on a random choice in certain cases because of its simplicity.
+
+My implementation of random page replacement is very simple: I generate an index within the bounds of the page table's size, and evict the corresponding page.
+
+\paragraph{Testing Second Chance}
+This random algorithm is on par with all other algorithms if page accesses are uniformly accessed, which is to be expected. However, it does not improve when the data is increasingly biased with a triangular distribution and my "One Page" example. At those points, more directed algorithms show cache-hit improvements, while the random algorithm does not.
+
+Using the input from Figure 1.1, this algorithm's number of page faults fluctuates between 11 and 15. If a workflow is difficult to predict, the random algorithm could be useful because of its lack of overhead.
+
+\section{Improving Performance}
+Each of my implementations for this lab used a vector or a deque: data structures that offer O(n) searching for elements. Time complexities could be improved by using a hash map to store the pages in memory. This would allow us to lookup page IDs in constant time. This does come with a space requirement tradeoff, however (although it is still O(n)).
+Another option would be to use a binary tree to maintain pages sorted by their ID. Lookup would then be O(logn).
+\pagebreak
+
+%----------------------------------------------------------------------------------------
+%  Appendix 
+%----------------------------------------------------------------------------------------
+
+\section{Appendix}
+
+%------------------------------------------------
+
+\subsection{Source code}
+This appendix section contains the sources used for implementing each page replacement algorithm. Each algorithm uses the Page class, which is shown in this section. Simple STL data structures were used to implement each algorithm. Stack and array-based algorithms were implemented using std::vector, while queue-based algorithms were implemented using std::deque. 
+
+
+\subsubsection{Page.h}
+\lstinputlisting[language=C++]{../Page.h}
+\subsubsection{Page.cpp}
+\lstinputlisting[language=C++]{../Page.cpp}
+\pagebreak
+
+\subsubsection{Least Recently Used}
+\lstinputlisting[language=C++]{../lru.cpp}
+\pagebreak
+
+\subsubsection{Least Frequently Used}
+\lstinputlisting[language=C++]{../lfu.cpp}
+\pagebreak
+
+\subsubsection{Second Chance}
+\lstinputlisting[language=C++]{../secondChance.cpp}
+\pagebreak
+
+\subsubsection{Random}
+\lstinputlisting[language=C++]{../random.cpp}
+
+%------------------------------------------------
+
+\subsection{Testing}
+I automated some testing with Python scripts. I created one script to automatically create semi-random input files. The biased input generating script takes two parameters; one that lets you choose the total number of lines in the input file and one that specifies the range of possible page IDs to be generated in the files.
+
+For testing, I tried different combinations for input type choices, along with varying page table sizes. Test outputs are tables with the number of input elements shown on the X-axis and the range of possible IDs on the Y-axis. Different table sizes are shown in separate tables. Each test has the number of misses shown, followed by the percent of requests missed.
+
+\subsubsection{Biased input generation}
+\lstinputlisting[language=Python]{../createInputs.py}
+\pagebreak
+
+\subsubsection{Test automation and output formatting}
+\lstinputlisting[language=Python]{../runTests.py}
+\pagebreak
+
+\subsubsection{Test results: uniform distribution}
+\lstinputlisting[basicstyle=\ttfamily]{../outputs/uniform.txt}
+\pagebreak
+
+\subsubsection{Test results: triangular distribution}
+\lstinputlisting[basicstyle=\ttfamily]{../outputs/triangular.txt}
+\pagebreak
+
+\subsubsection{Test results: one page favored}
+\lstinputlisting[basicstyle=\ttfamily]{../outputs/onePage.txt}
+
+%----------------------------------------------------------------------------------------
 
 \end{document}

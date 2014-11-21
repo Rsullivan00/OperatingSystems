@@ -1,69 +1,69 @@
 Table size: 10
 X=# of elements in input files. Y=Range of page IDs in input files.
 
-	500            		1000           		2000           	
+ 500           1000          2000         
 50
-	lru: 398 79%   	|	lru: 796 79%   	|	lru: 1616 80%  	|
-	lfu: 402 80%   	|	lfu: 771 77%   	|	lfu: 1597 79%  	|
-	sec: 402 80%   	|	sec: 796 79%   	|	sec: 1617 80%  	|
-	ran: 400 80%   	|	ran: 796 79%   	|	ran: 1625 81%  	|
+ lru: 409 81% | lru: 792 79% | lru: 1592 79% |
+ lfu: 390 78% | lfu: 799 79% | lfu: 1615 80% |
+ sec: 406 81% | sec: 788 78% | sec: 1594 79% |
+ ran: 404 80% | ran: 799 79% | ran: 1595 79% |
 
 200
-	lru: 481 96%   	|	lru: 956 95%   	|	lru: 1881 94%  	|
-	lfu: 472 94%   	|	lfu: 943 94%   	|	lfu: 1911 95%  	|
-	sec: 480 96%   	|	sec: 956 95%   	|	sec: 1882 94%  	|
-	ran: 477 95%   	|	ran: 953 95%   	|	ran: 1885 94%  	|
+ lru: 472 94% | lru: 948 94% | lru: 1894 94% |
+ lfu: 478 95% | lfu: 955 95% | lfu: 1901 95% |
+ sec: 471 94% | sec: 948 94% | sec: 1895 94% |
+ ran: 468 93% | ran: 955 95% | ran: 1897 94% |
 
 1000
-	lru: 494 98%   	|	lru: 989 98%   	|	lru: 1974 98%  	|
-	lfu: 496 99%   	|	lfu: 993 99%   	|	lfu: 1971 98%  	|
-	sec: 494 98%   	|	sec: 989 98%   	|	sec: 1974 98%  	|
-	ran: 494 98%   	|	ran: 988 98%   	|	ran: 1973 98%  	|
+ lru: 494 98% | lru: 989 98% | lru: 1985 99% |
+ lfu: 491 98% | lfu: 988 98% | lfu: 1986 99% |
+ sec: 494 98% | sec: 989 98% | sec: 1985 99% |
+ ran: 492 98% | ran: 990 99% | ran: 1982 99% |
 
 
 Table size: 100
 X=# of elements in input files. Y=Range of page IDs in input files.
 
-	500            		1000           		2000           	
+ 500           1000          2000         
 50
-	lru: 50 10%    	|	lru: 50 5%     	|	lru: 50 2%     	|
-	lfu: 50 10%    	|	lfu: 50 5%     	|	lfu: 50 2%     	|
-	sec: 50 10%    	|	sec: 50 5%     	|	sec: 50 2%     	|
-	ran: 71 14%    	|	ran: 71 7%     	|	ran: 71 3%     	|
+ lru: 50 10%  | lru: 50 5%   | lru: 50 2%   |
+ lfu: 50 10%  | lfu: 50 5%   | lfu: 50 2%   |
+ sec: 50 10%  | sec: 50 5%   | sec: 50 2%   |
+ ran: 66 13%  | ran: 66 6%   | ran: 66 3%   |
 
 200
-	lru: 278 55%   	|	lru: 483 48%   	|	lru: 1062 53%  	|
-	lfu: 284 56%   	|	lfu: 528 52%   	|	lfu: 1055 52%  	|
-	sec: 284 56%   	|	sec: 499 49%   	|	sec: 1057 52%  	|
-	ran: 324 64%   	|	ran: 573 57%   	|	ran: 1080 54%  	|
+ lru: 293 58% | lru: 524 52% | lru: 1033 51% |
+ lfu: 299 59% | lfu: 521 52% | lfu: 1026 51% |
+ sec: 298 59% | sec: 527 52% | sec: 1014 50% |
+ ran: 329 65% | ran: 539 53% | ran: 1078 53% |
 
 1000
-	lru: 451 90%   	|	lru: 908 90%   	|	lru: 1777 88%  	|
-	lfu: 459 91%   	|	lfu: 908 90%   	|	lfu: 1808 90%  	|
-	sec: 451 90%   	|	sec: 913 91%   	|	sec: 1781 89%  	|
-	ran: 462 92%   	|	ran: 918 91%   	|	ran: 1792 89%  	|
+ lru: 462 92% | lru: 912 91% | lru: 1815 90% |
+ lfu: 451 90% | lfu: 915 91% | lfu: 1783 89% |
+ sec: 459 91% | sec: 913 91% | sec: 1820 91% |
+ ran: 466 93% | ran: 919 91% | ran: 1825 91% |
 
 
 Table size: 500
 X=# of elements in input files. Y=Range of page IDs in input files.
 
-	500            		1000           		2000           	
+ 500           1000          2000         
 50
-	lru: 50 10%    	|	lru: 50 5%     	|	lru: 50 2%     	|
-	lfu: 50 10%    	|	lfu: 50 5%     	|	lfu: 50 2%     	|
-	sec: 50 10%    	|	sec: 50 5%     	|	sec: 50 2%     	|
-	ran: 50 10%    	|	ran: 50 5%     	|	ran: 50 2%     	|
+ lru: 50 10%  | lru: 50 5%   | lru: 50 2%   |
+ lfu: 50 10%  | lfu: 50 5%   | lfu: 50 2%   |
+ sec: 50 10%  | sec: 50 5%   | sec: 50 2%   |
+ ran: 52 10%  | ran: 52 5%   | ran: 52 2%   |
 
 200
-	lru: 179 35%   	|	lru: 198 19%   	|	lru: 200 10%   	|
-	lfu: 179 35%   	|	lfu: 198 19%   	|	lfu: 200 10%   	|
-	sec: 179 35%   	|	sec: 198 19%   	|	sec: 200 10%   	|
-	ran: 192 38%   	|	ran: 230 23%   	|	ran: 238 11%   	|
+ lru: 185 37% | lru: 199 19% | lru: 200 10% |
+ lfu: 185 37% | lfu: 199 19% | lfu: 200 10% |
+ sec: 185 37% | sec: 199 19% | sec: 200 10% |
+ ran: 205 41% | ran: 240 24% | ran: 249 12% |
 
 1000
-	lru: 409 81%   	|	lru: 644 64%   	|	lru: 1153 57%  	|
-	lfu: 409 81%   	|	lfu: 640 64%   	|	lfu: 1135 56%  	|
-	sec: 409 81%   	|	sec: 643 64%   	|	sec: 1123 56%  	|
-	ran: 429 85%   	|	ran: 753 75%   	|	ran: 1319 65%  	|
+ lru: 388 77% | lru: 632 63% | lru: 1160 58% |
+ lfu: 388 77% | lfu: 634 63% | lfu: 1153 57% |
+ sec: 388 77% | sec: 625 62% | sec: 1158 57% |
+ ran: 413 82% | ran: 732 73% | ran: 1296 64% |
 
 

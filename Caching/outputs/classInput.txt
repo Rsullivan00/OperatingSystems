@@ -1,0 +1,69 @@
+Table size: 10
+X=# of elements in input files. Y=Range of page IDs in input files.
+
+ 500           1000          2000         
+50
+ lru: 8 1%    | lru: 8 0%    | lru: 8 0%    |
+ lfu: 8 1%    | lfu: 8 0%    | lfu: 8 0%    |
+ sec: 8 1%    | sec: 8 0%    | sec: 8 0%    |
+ ran: 8 1%    | ran: 8 0%    | ran: 8 0%    |
+
+200
+ lru: 8 1%    | lru: 8 0%    | lru: 8 0%    |
+ lfu: 8 1%    | lfu: 8 0%    | lfu: 8 0%    |
+ sec: 8 1%    | sec: 8 0%    | sec: 8 0%    |
+ ran: 8 1%    | ran: 8 0%    | ran: 8 0%    |
+
+1000
+ lru: 8 1%    | lru: 8 0%    | lru: 8 0%    |
+ lfu: 8 1%    | lfu: 8 0%    | lfu: 8 0%    |
+ sec: 8 1%    | sec: 8 0%    | sec: 8 0%    |
+ ran: 8 1%    | ran: 8 0%    | ran: 8 0%    |
+
+
+Table size: 100
+X=# of elements in input files. Y=Range of page IDs in input files.
+
+ 500           1000          2000         
+50
+ lru: 8 1%    | lru: 8 0%    | lru: 8 0%    |
+ lfu: 8 1%    | lfu: 8 0%    | lfu: 8 0%    |
+ sec: 8 1%    | sec: 8 0%    | sec: 8 0%    |
+ ran: 8 1%    | ran: 8 0%    | ran: 8 0%    |
+
+200
+ lru: 8 1%    | lru: 8 0%    | lru: 8 0%    |
+ lfu: 8 1%    | lfu: 8 0%    | lfu: 8 0%    |
+ sec: 8 1%    | sec: 8 0%    | sec: 8 0%    |
+ ran: 8 1%    | ran: 8 0%    | ran: 8 0%    |
+
+1000
+ lru: 8 1%    | lru: 8 0%    | lru: 8 0%    |
+ lfu: 8 1%    | lfu: 8 0%    | lfu: 8 0%    |
+ sec: 8 1%    | sec: 8 0%    | sec: 8 0%    |
+ ran: 8 1%    | ran: 8 0%    | ran: 8 0%    |
+
+
+Table size: 500
+X=# of elements in input files. Y=Range of page IDs in input files.
+
+ 500           1000          2000         
+50
+ lru: 8 1%    | lru: 8 0%    | lru: 8 0%    |
+ lfu: 8 1%    | lfu: 8 0%    | lfu: 8 0%    |
+ sec: 8 1%    | sec: 8 0%    | sec: 8 0%    |
+ ran: 8 1%    | ran: 8 0%    | ran: 8 0%    |
+
+200
+ lru: 8 1%    | lru: 8 0%    | lru: 8 0%    |
+ lfu: 8 1%    | lfu: 8 0%    | lfu: 8 0%    |
+ sec: 8 1%    | sec: 8 0%    | sec: 8 0%    |
+ ran: 8 1%    | ran: 8 0%    | ran: 8 0%    |
+
+1000
+ lru: 8 1%    | lru: 8 0%    | lru: 8 0%    |
+ lfu: 8 1%    | lfu: 8 0%    | lfu: 8 0%    |
+ sec: 8 1%    | sec: 8 0%    | sec: 8 0%    |
+ ran: 8 1%    | ran: 8 0%    | ran: 8 0%    |
+
+

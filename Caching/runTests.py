@@ -31,9 +31,9 @@ for fileName in os.listdir(inputDir):
                 row.append(element)
             counts.append(row)
 
-        colWidth = 15 
+        colWidth = 12 
         for inputSize in inputSizes:
-            fout.write('\t' + inputSize.ljust(colWidth) + '\t')
+            fout.write(' ' + inputSize.ljust(colWidth) + ' ')
         fout.write('\n')
 
         for i in range(len(idRanges)):
@@ -43,7 +43,7 @@ for fileName in os.listdir(inputDir):
                     numMissed = counts[j][i][prog]
                     percentMissed = (int(numMissed) * 100) / int(inputSizes[j])
                     content = prog[0:3] + ': ' + str(numMissed) + ' ' + str(percentMissed) + '%'
-                    fout.write('\t' + content.ljust(colWidth) + '\t|')
+                    fout.write(' ' + content.ljust(colWidth) + ' |')
                 fout.write('\n')
             fout.write('\n')
                 
