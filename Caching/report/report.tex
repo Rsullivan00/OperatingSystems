@@ -171,6 +171,8 @@ I automated some testing with Python scripts. I created one script to automatica
 
 For testing, I tried different combinations for input type choices, along with varying page table sizes. Test outputs are tables with the number of input elements shown on the X-axis and the range of possible IDs on the Y-axis. Different table sizes are shown in separate tables. Each test has the number of misses shown, followed by the percent of requests missed.
 
+As the page table size gets as big as the number of possible IDs in the input, misses fall to only first-time cache misses.
+
 \subsubsection{Biased input generation}
 \lstinputlisting[language=Python]{../createInputs.py}
 \pagebreak
