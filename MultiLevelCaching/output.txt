@@ -1,0 +1,51 @@
+cat workload.txt  |  wc -l 
+1000000
+cat workload.txt  | ./lru 250 |  wc -l 
+796063
+cat workload.txt  | ./lru 250 | ./lru 250 |  wc -l 
+777819
+cat workload.txt  | ./lru 250 | ./lfu 250 |  wc -l 
+731611
+cat workload.txt  | ./lru 250 | ./secondChance 250 |  wc -l 
+773692
+cat workload.txt  | ./lru 250 | ./random 250 |  wc -l 
+726302
+cat workload.txt  | ./lru 500 |  wc -l 
+595959
+cat workload.txt  | ./lfu 250 |  wc -l 
+919925
+cat workload.txt  | ./lfu 250 | ./lru 250 |  wc -l 
+720134
+cat workload.txt  | ./lfu 250 | ./lfu 250 |  wc -l 
+919925
+cat workload.txt  | ./lfu 250 | ./secondChance 250 |  wc -l 
+721846
+cat workload.txt  | ./lfu 250 | ./random 250 |  wc -l 
+721969
+cat workload.txt  | ./lfu 500 |  wc -l 
+844745
+cat workload.txt  | ./secondChance 250 |  wc -l 
+797346
+cat workload.txt  | ./secondChance 250 | ./lru 250 |  wc -l 
+797346
+cat workload.txt  | ./secondChance 250 | ./lfu 250 |  wc -l 
+732608
+cat workload.txt  | ./secondChance 250 | ./secondChance 250 |  wc -l 
+797346
+cat workload.txt  | ./secondChance 250 | ./random 250 |  wc -l 
+729732
+cat workload.txt  | ./secondChance 500 |  wc -l 
+601501
+cat workload.txt  | ./random 250 |  wc -l 
+797886
+cat workload.txt  | ./random 250 | ./lru 250 |  wc -l 
+726371
+cat workload.txt  | ./random 250 | ./lfu 250 |  wc -l 
+733034
+cat workload.txt  | ./random 250 | ./secondChance 250 |  wc -l 
+724516
+cat workload.txt  | ./random 250 | ./random 250 |  wc -l 
+797933
+cat workload.txt  | ./random 500 |  wc -l 
+603236
+
