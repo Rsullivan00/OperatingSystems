@@ -92,6 +92,16 @@ I tested each combination of two-level caches assuming a combined cache size of 
 
 \begin{figure}    \centering
     \begin{tabular}{l l | l | l | l | l}
+        \multicolumn{2}{r}{} & \multicolumn{4}{ c }{Caching algorithm} \\
+        & &   LRU     &   LFU     &   Sec. Chance & Random \\ \cline{2-6}
+        \multirow{2}{*}{Cache size} & 250 &   79.6\%  &  92.0\%   &   79.7\%  &   79.8\% \\ 
+        & 500 &   59.6\%  &   84.4\%  &   60.2\%  &   60.3\%  \\ 
+    \end{tabular}
+    \caption{Miss rates for single-level caches}
+\end{figure}
+
+\begin{figure}    \centering
+    \begin{tabular}{l l | l | l | l | l}
         \multicolumn{2}{r}{} & \multicolumn{4}{ c }{Second-level cache} \\
         & &   LRU     &   LFU     &   Sec. Chance & Random \\ \cline{2-6}
         \multirow{4}{*}{First-level cache} & LRU     &   77.8\%  &  73.2\%   &   77.4\%  &   72.6\% \\ 
